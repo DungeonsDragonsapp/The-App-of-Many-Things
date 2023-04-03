@@ -2,7 +2,7 @@ package com.example.theappofmanythings
 import android.app.Application
 import com.parse.Parse;
 
-class App : Application() {
+class AppOfmanythings : Application() {
     override fun onCreate() {
         super.onCreate()
         Parse.initialize(
