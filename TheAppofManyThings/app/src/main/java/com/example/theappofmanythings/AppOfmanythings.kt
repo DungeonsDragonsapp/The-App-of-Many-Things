@@ -13,5 +13,3 @@ class AppOfmanythings : Application() {
                 .build());
     }
 }
-
-//sd

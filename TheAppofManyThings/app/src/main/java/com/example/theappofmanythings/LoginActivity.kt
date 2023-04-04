@@ -46,5 +46,3 @@ class LoginActivity : AppCompatActivity() {
         )
     }
 }
-///jh
-//  HSDGSAJDHASKDJA
