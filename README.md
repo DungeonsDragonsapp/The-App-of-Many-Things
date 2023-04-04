@@ -9,5 +9,6 @@ The following **required** functionality is completed:
 
 
 
-Amaan- 
+Amaan
+
 ![Sprint2 login register](https://user-images.githubusercontent.com/99455992/229935893-c2b47f2f-6ebc-4355-8399-df30aca2877d.gif)
