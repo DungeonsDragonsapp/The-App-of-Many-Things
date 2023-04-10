@@ -1,6 +1,6 @@
 
-package com.codepath.articlesearch
-import android.support.annotation.Keep
+package com.example.theappofmanythings
+import androidx.annotation.Keep
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 

@@ -1,14 +1,12 @@
-package com.codepath.articlesearch
+package com.example.theappofmanythings
 
 import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 
 const val ARTICLE_EXTRA = "ARTICLE_EXTRA"
 private const val TAG = "ArticleAdapter"
@@ -46,7 +44,7 @@ class ArticleAdapter(private val context: Context, private val spells: List<Spel
 
         override fun onClick(v: View?) {
             // TODO: Get selected article
-            val spell = spells[absoluteAdapterPosition]
+            val spell = spells[layoutPosition]
 
             // TODO: Navigate to Details screen and pass selected article
             val intent = Intent(context, DetailActivity::class.java)

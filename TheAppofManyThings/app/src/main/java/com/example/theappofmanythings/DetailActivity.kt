@@ -1,16 +1,13 @@
-package com.codepath.articlesearch
+package com.example.theappofmanythings
 
 import android.os.Bundle
 import android.util.Log
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.bumptech.glide.Glide
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
 import org.json.JSONException
-import org.json.JSONObject
 
 private const val TAG = "DetailActivity"
 
@@ -50,26 +47,11 @@ class DetailActivity : AppCompatActivity() {
 
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
                 Log.i(TAG, "Successfully fetched an individual spell: $json")
-                try {/*
-                    // TODO: Create the parsedJSON
-                    val parsedJson = createJson().decodeFromString(
-                        SearchNewsResponse.serializer(),
-                        json.jsonObject.toString()
-                    )
+                try {
 
-                    // TODO: Do something with the returned json (contains article information)
-
-                    // TODO: Save the articles and reload the screen
-                    parsedJson.results?.let { list ->
-                        spells.addAll(list)
-
-                        // Reload the screen
-                        articleAdapter.notifyDataSetChanged()
-                    }*/
                     val parsedJson = createJson().decodeFromString(
                         CoolerSpell.serializer(),
-                        json.jsonObject.toString()
-                    )
+                        json.jsonObject.toString())
 
                     bylineTextView.text = "Spell level: "+parsedJson.level.toString()
                     abstractTextView.text = parsedJson.desc?.get(0);
