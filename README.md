@@ -17,3 +17,14 @@ Amaan
 Large gif of sprint 2:
 ![229935893-c2b47f2f-6ebc-4355-8399-df30aca2877d-min](https://user-images.githubusercontent.com/122946486/230484351-277bf4cc-12c5-4f4b-b1ee-90499b7f6639.gif)
 
+
+
+For sprint 3:
+
+The following **required** functionality is completed:
+
+- [x] **Character Creation Screen**
+- [x] **Set up swapable race, class and level toggles**
+- [x] **Add Spell screen progress**
+
+Large gif of sprint 3:![DNDAPP](https://user-images.githubusercontent.com/122946486/231637492-1a50c74a-ed2d-4c05-9214-70b74546eb61.gif)
