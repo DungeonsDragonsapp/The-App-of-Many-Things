@@ -1,17 +1,12 @@
 package com.example.theappofmanythings
 
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.lifecycle.lifecycleScope
 //import com.codepath.articlesearch.ItemApplication
-import com.example.theappofmanythings.R
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 private const val TAG = "DetailActivity"
 
@@ -22,8 +17,8 @@ class AddActivity : AppCompatActivity() {
         setContentView(R.layout.input_layout)
 
         val button = findViewById<Button>(R.id.submitButton)
-        val etLink = findViewById<EditText>(R.id.editTextUrl)
-        val etMoney = findViewById<EditText>(R.id.editTextPrice)
+        val etLink = findViewById<EditText>(R.id.editTextDesc)
+        val etMoney = findViewById<EditText>(R.id.editTextLvl)
         val etName = findViewById<EditText>(R.id.editTextName)
 
         button.setOnClickListener{

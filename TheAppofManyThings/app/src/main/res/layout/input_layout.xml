@@ -62,7 +62,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextPrice"
+        android:id="@+id/editTextLvl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
@@ -73,14 +73,14 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextName" />
 
     <EditText
-        android:id="@+id/editTextUrl"
+        android:id="@+id/editTextDesc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
-        android:inputType="number"
+        android:inputType="text"
         android:hint="Description"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLvl" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
