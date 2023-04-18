@@ -1,5 +1,4 @@
 package com.example.theappofmanythings
-package com.codepath.articlesearch
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.codepath.articlesearch.databinding.ActivityMainBinding
+import com.example.theappofmanythings.databinding.ActivityMainBinding
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import kotlinx.serialization.json.Json
@@ -21,7 +20,6 @@ fun createJson() = Json {
 }
 
 private const val TAG = "MainActivity/"
-private const val SEARCH_API_KEY = BuildConfig.API_KEY
 private const val ARTICLE_SEARCH_URL =
     "https://www.dnd5eapi.co/api/spells"
 
