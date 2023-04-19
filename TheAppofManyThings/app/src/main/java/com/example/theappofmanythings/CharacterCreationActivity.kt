@@ -3,8 +3,11 @@ package com.example.theappofmanythings
 import android.R
 import android.os.Bundle
 import android.widget.ArrayAdapter
+import android.widget.Button
+import android.widget.EditText
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import com.parse.ParseObject
 
 
 class CharacterCreationActivity : AppCompatActivity() {
@@ -23,5 +26,25 @@ class CharacterCreationActivity : AppCompatActivity() {
 
         spinnerRaces.adapter = adapter
         spinnerClasses.adapter = adapterTwo
+
+
+
+        val nextButton = findViewById<Button>(com.example.theappofmanythings.R.id.nextButton)
+        val backgroundEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.backgroundInput)
+        val levelEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.levelInput)
+        nextButton.setOnClickListener {
+            val character = ParseObject("character")
+            val myRace = spinnerRaces.selectedItem.toString()
+            val myClass = spinnerClasses.selectedItem.toString()
+            val myBackground = backgroundEditText.text.toString()
+            val myLevel = levelEditText.text.toString()
+            character.put("race", myRace)
+            character.put("class", myClass)
+            character.put("background", myBackground)
+            character.put("level", myLevel)
+            character.saveInBackground()
+        }
+
+
     }
 }
