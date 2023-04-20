@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 const val ARTICLE_EXTRA = "ARTICLE_EXTRA"
 private const val TAG = "ArticleAdapter"
 
-class ArticleAdapter(private val context: Context, private val spells: List<Spell>) :
+class ArticleAdapter(private val context: Context, private val listSpells: List<listSpell>) :
     RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -20,11 +20,11 @@ class ArticleAdapter(private val context: Context, private val spells: List<Spel
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val article = spells[position]
+        val article = listSpells[position]
         holder.bind(article)
     }
 
-    override fun getItemCount() = spells.size
+    override fun getItemCount() = listSpells.size
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
         View.OnClickListener {
@@ -37,14 +37,14 @@ class ArticleAdapter(private val context: Context, private val spells: List<Spel
         }
 
         // TODO: Write a helper method to help set up the onBindViewHolder method
-        fun bind(article: Spell) {
+        fun bind(article: listSpell) {
             titleTextView.text = article.name
             abstractTextView.text = article.url
         }
 
         override fun onClick(v: View?) {
             // TODO: Get selected article
-            val spell = spells[layoutPosition]
+            val spell = listSpells[layoutPosition]
 
             // TODO: Navigate to Details screen and pass selected article
             val intent = Intent(context, DetailActivity::class.java)

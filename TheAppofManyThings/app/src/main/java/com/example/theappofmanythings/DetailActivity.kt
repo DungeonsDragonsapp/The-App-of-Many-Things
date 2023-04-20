@@ -27,15 +27,15 @@ class DetailActivity : AppCompatActivity() {
         abstractTextView = findViewById(R.id.mediaAbstract)
 
         // TODO: Get the extra from the Intent
-        val spell = intent.getSerializableExtra(ARTICLE_EXTRA) as Spell
+        val listSpell = intent.getSerializableExtra(ARTICLE_EXTRA) as listSpell
 
         // TODO: Set the title, byline, and abstract information from the article
-        titleTextView.text = spell.name
+        titleTextView.text = listSpell.name
 
         //call a new API call
 
         val client = AsyncHttpClient()
-        client.get("https://www.dnd5eapi.co${spell.url}", object : JsonHttpResponseHandler() {
+        client.get("https://www.dnd5eapi.co${listSpell.url}", object : JsonHttpResponseHandler() {
             override fun onFailure(
                 statusCode: Int,
                 headers: Headers?,
@@ -66,7 +66,7 @@ class DetailActivity : AppCompatActivity() {
 
 
         bylineTextView.text = "Hello world!"
-        abstractTextView.text = spell.url
+        abstractTextView.text = listSpell.url
 
         // TODO: Load the media image
     }

@@ -1,11 +1,15 @@
 package com.example.theappofmanythings
 
 
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.parse.ParseUser
+
 //import com.codepath.articlesearch.ItemApplication
 
 private const val TAG = "DetailActivity"
@@ -17,30 +21,30 @@ class AddActivity : AppCompatActivity() {
         setContentView(R.layout.input_layout)
 
         val button = findViewById<Button>(R.id.submitButton)
-        val etLink = findViewById<EditText>(R.id.editTextDesc)
-        val etMoney = findViewById<EditText>(R.id.editTextLvl)
+        val etDesc = findViewById<EditText>(R.id.editTextDesc)
+        val etLvl = findViewById<EditText>(R.id.editTextLvl)
         val etName = findViewById<EditText>(R.id.editTextName)
 
         button.setOnClickListener{
 
-            val link = etLink.getText().toString()
-            val money = etMoney.getText().toString()
-            val thisName = etName.getText().toString()
+            val desc = etDesc.getText().toString()
+            val lvl = etLvl.getText().toString()
+            val name = etName.getText().toString()
 
-            if(link == "")
+            if(desc == "")
             {
                 Toast.makeText(
-                    this, "Please input a valid amount of protein for the food", Toast.LENGTH_SHORT).show()
+                    this, "Please input a valid description the spell", Toast.LENGTH_SHORT).show()
             }
-            else if(money == "")
+            else if(lvl == "")
             {
                 Toast.makeText(
-                    this, "Please input a valid amount of calories for the food", Toast.LENGTH_SHORT).show()
+                    this, "Please input a valid level for the spell", Toast.LENGTH_SHORT).show()
             }
-            else if(thisName == "")
+            else if(name == "")
             {
                 Toast.makeText(
-                    this, "Please input a valid name for the food", Toast.LENGTH_SHORT).show()
+                    this, "Please input a valid name for the spell", Toast.LENGTH_SHORT).show()
             }
             else {
 
@@ -56,15 +60,37 @@ class AddActivity : AppCompatActivity() {
                         )
                     )
                 }*/
-                Toast.makeText(
-                    this, "Shit's been made!", Toast.LENGTH_SHORT).show()
 
-                super.finish()
+// Create car object and update it's attributes
+                val spell = Spell()
+                spell.setName(name)
+                spell.setDescription(desc)
+                spell.setLevel(lvl)
+                spell.setUser(ParseUser.getCurrentUser()) // Get currently logged in user and set as owner of car
+
+                // Save car to parse backend
+                spell.saveInBackground{ exception ->
+                    if (exception != null) {
+                        Log.d(TAG, "Error while adding spell")
+                        exception.printStackTrace()
+                        Toast.makeText(this, "Failed to add spell", Toast.LENGTH_SHORT).show()
+                    } else {
+                        Log.i(TAG, "Successfully added spell to parse!")
+                    }
+                }
+
+                goToMainActivity()
 
             }
 
         }
 
+    }
+
+    private fun goToMainActivity() {
+        val intent = Intent(this@AddActivity, MainActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
 
