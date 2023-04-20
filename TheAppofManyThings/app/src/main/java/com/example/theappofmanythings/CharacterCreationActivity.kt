@@ -1,6 +1,7 @@
 package com.example.theappofmanythings
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -9,6 +10,7 @@ import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.parse.ParseObject
 
+public val character : ParseObject = ParseObject("character")
 
 class CharacterCreationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,6 +45,8 @@ class CharacterCreationActivity : AppCompatActivity() {
             character.put("background", myBackground)
             character.put("level", myLevel)
             character.saveInBackground()
+            val intent = Intent(this@CharacterCreationActivity, StatActivity::class.java)
+            startActivity(intent)
         }
 
 
