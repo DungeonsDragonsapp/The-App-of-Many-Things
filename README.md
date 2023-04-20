@@ -40,4 +40,5 @@ The following **required** functionality is completed:
 - [x] **Added stat page**
 
 ![DNDAPPSPRINT4](https://user-images.githubusercontent.com/122946486/233233605-15332088-258b-45d7-a6f4-c78cbcaf9ae5.gif)
+![5eSpellRegs](https://user-images.githubusercontent.com/122936348/233246413-7154fb7e-f433-4703-a4d0-b4afd0bd865f.gif)
 
