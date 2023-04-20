@@ -28,3 +28,16 @@ The following **required** functionality is completed:
 - [x] **Add Spell screen progress**
 
 Large gif of sprint 3:![DNDAPP](https://user-images.githubusercontent.com/122946486/231637492-1a50c74a-ed2d-4c05-9214-70b74546eb61.gif)
+
+
+For Sprint 4:
+
+
+The following **required** functionality is completed:
+
+- [x] **Character creation screen traits saving to Back4App**
+- [x] **Established connection to Back4App to add spells**
+- [x] **Added stat page**
+
+![DNDAPPSPRINT4](https://user-images.githubusercontent.com/122946486/233233605-15332088-258b-45d7-a6f4-c78cbcaf9ae5.gif)
+
