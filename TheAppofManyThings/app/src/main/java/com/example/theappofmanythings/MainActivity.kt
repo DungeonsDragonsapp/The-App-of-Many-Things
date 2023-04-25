@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.theappofmanythings.databinding.ActivityMainBinding
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
-import com.parse.Parse
-import com.parse.ParseObject
+import com.parse.*
 import kotlinx.serialization.json.Json
 import okhttp3.Headers
 import org.json.JSONException
@@ -102,6 +101,8 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        queryFromDb()
+        articleAdapter.notifyDataSetChanged()
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener{
@@ -113,5 +114,45 @@ class MainActivity : AppCompatActivity() {
             //startActivity(intent)
         }
 
+    }
+
+    private fun queryFromDb() {
+        // Start creating a Parse query
+        val query: ParseQuery<Spell> = ParseQuery(Spell::class.java)
+
+        // Asking parse to also include the user that posted the Post (Since User is a pointer in the Post table)
+        query.include(Spell.KEY_USER)
+
+        // Get cars in reverse-chronological order that we created them
+        query.addDescendingOrder("createdAt")
+
+        // Only retrieving the cars of the currently authenticated user
+        query.whereEqualTo("user", ParseUser.getCurrentUser())
+
+        // Launch the query
+        query.findInBackground(object : FindCallback<Spell> {
+            override fun done(spellsResponse: MutableList<Spell>?, e: ParseException?) {
+                if (e != null) {
+                    Log.e(TAG, "Error fetching posts")
+                } else {
+                    if (spellsResponse != null) {
+                        val dbSpellList = mutableListOf<listSpell>()
+
+                        for (singleCar in spellsResponse)
+                        {
+                            Log.i(
+                                TAG,
+                                "Spell: " + singleCar.getName() + ", username: " + singleCar.getUser()?.username
+                            )
+                            val addToDb = listSpell("IsDb", singleCar.getName(), singleCar.objectId)
+                            dbSpellList.add(addToDb)
+                        }
+                        listSpells.addAll(dbSpellList)
+                        //articleAdapter.notifyDataSetChanged()
+                        //swipeContainer.isRefreshing = false
+                    }
+                }
+            }
+        })
     }
 }

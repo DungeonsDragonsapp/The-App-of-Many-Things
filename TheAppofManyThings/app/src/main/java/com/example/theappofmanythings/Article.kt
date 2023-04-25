@@ -43,8 +43,8 @@ data class CoolerSpell(
 //god help me
 @ParseClassName("Spells")
 class Spell : ParseObject() {
-    fun getLevel(): String? {
-        return getString(KEY_LEVEL)
+    fun getLevel(): Int? {
+        return getInt(KEY_LEVEL)
     }
     fun setLevel(make: String) {
         put(KEY_LEVEL, make.toInt())
