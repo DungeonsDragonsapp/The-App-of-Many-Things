@@ -2,10 +2,7 @@ package com.example.theappofmanythings
 
 import android.R
 import android.os.Bundle
-import android.widget.ArrayAdapter
-import android.widget.Button
-import android.widget.EditText
-import android.widget.Spinner
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.parse.ParseObject
 
@@ -24,19 +21,22 @@ class StatActivity : AppCompatActivity(){
         val wisdom = findViewById<EditText>(com.example.theappofmanythings.R.id.wisInput)
         val charisma = findViewById<EditText>(com.example.theappofmanythings.R.id.charismaInput)
 
-        val strengthString = strength.text.toString()
-        val dexString = dexterity.text.toString()
-        val constString = constitution.text.toString()
-        val intString = intelligence.text.toString()
-        val wisString = wisdom.text.toString()
-        val charismaString = charisma.text.toString()
+
         nextButton.setOnClickListener {
+            val strengthString = strength.text.toString()
+            val dexString = dexterity.text.toString()
+            val constString = constitution.text.toString()
+            val intString = intelligence.text.toString()
+            val wisString = wisdom.text.toString()
+            val charismaString = charisma.text.toString()
+
             character.put("Strength", strengthString)
             character.put("Dexterity", dexString)
             character.put("Constitution", constString)
             character.put("Intelligence", intString)
             character.put("Wisdom", wisString)
             character.put("Charisma", charismaString)
+            character.saveInBackground()
         }
     }
 }
