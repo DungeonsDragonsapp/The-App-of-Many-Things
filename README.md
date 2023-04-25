@@ -42,3 +42,14 @@ The following **required** functionality is completed:
 ![DNDAPPSPRINT4](https://user-images.githubusercontent.com/122946486/233233605-15332088-258b-45d7-a6f4-c78cbcaf9ae5.gif)
 ![5eSpellRegs](https://user-images.githubusercontent.com/122936348/233246413-7154fb7e-f433-4703-a4d0-b4afd0bd865f.gif)
 
+
+For Sprint 5:
+
+The following **required** functionality is completed:
+
+- [x] **Added compatability to allow custom spells to show up in the recyclerview (with detailview compatability)**
+- [x] **Fixed stat page and allowed it to save to backapp**
+![DNDAPPSPRINT5](https://user-images.githubusercontent.com/122946486/234166462-f6bacc5d-9bd7-4017-94fc-f52b3bb64b86.gif)
+![customSpells](https://user-images.githubusercontent.com/122946486/234166498-24def933-ac01-451a-b3d5-15f9fd8299d3.gif)
+
+
