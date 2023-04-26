@@ -41,6 +41,21 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.716" />
 
+    <EditText
+        android:id="@+id/characterNameInput"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:layout_margin="24dp"
+        android:ems="10"
+        android:hint="Name Character"
+        android:inputType="number"
+        android:padding="4dp"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/levelInput" />
+
     <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"

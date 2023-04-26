@@ -44,13 +44,16 @@ class CharacterCreationActivity : AppCompatActivity() {
         val backgroundEditText =
             findViewById<EditText>(com.example.theappofmanythings.R.id.backgroundInput)
         val levelEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.levelInput)
+        val nameEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.characterNameInput)
         nextButton.setOnClickListener {
             //val character = ParseObject("character")
             val myRace = spinnerRaces.selectedItem.toString()
             val myClass = spinnerClasses.selectedItem.toString()
             val myBackground = backgroundEditText.text.toString()
+            val myName = nameEditText.text.toString()
             var myLevel = levelEditText.text.toString().toInt()
             var charactercreate = Character()
+            charactercreate.setName(myName)
             charactercreate.setRace(myRace)
             charactercreate.setClass(myClass)
             charactercreate.setBackground(myBackground)
