@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import com.parse.ParseUser
 
+var currentuser : String = ""
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val username = findViewById<EditText>(R.id.inputUsername).text.toString()
             val password = findViewById<EditText>(R.id.inputPassword).text.toString()
             loginUser(username, password)
+            currentuser = currentuser + username
         }
     }
 
