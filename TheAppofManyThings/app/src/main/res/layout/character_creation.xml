@@ -8,16 +8,16 @@
 
 
     <EditText
-        android:id="@+id/subclassInput"
+        android:id="@+id/backgroundInput"
         android:layout_width="270dp"
         android:layout_height="60dp"
         android:layout_margin="24dp"
         android:ems="10"
-        android:hint="Select Subclass"
+        android:hint="Background"
         android:inputType="textPersonName"
         android:padding="4dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/backgroundInput"
+        app:layout_constraintBottom_toTopOf="@+id/levelInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.838" />
 
     <EditText
-        android:id="@+id/backgroundInput"
+        android:id="@+id/levelInput"
         android:layout_width="270dp"
         android:layout_height="60dp"
         android:layout_margin="24dp"
@@ -34,19 +34,19 @@
         android:inputType="number"
         android:padding="4dp"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.739" />
+        app:layout_constraintVertical_bias="0.716" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="24dp"
-        android:text="Button"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -71,7 +71,7 @@
         android:layout_marginTop="124dp"
         android:hint="Select Class"
         android:text=""
-        app:layout_constraintBottom_toTopOf="@+id/subclassInput"
+        app:layout_constraintBottom_toTopOf="@+id/backgroundInput"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.659"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +83,7 @@
         android:layout_width="191dp"
         android:layout_height="26dp"
         android:layout_marginBottom="14dp"
-        android:text="Select Race + Class"
+        android:text="Select Race"
         app:layout_constraintBottom_toTopOf="@+id/spinner_races"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
