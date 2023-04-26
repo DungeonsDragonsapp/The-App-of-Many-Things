@@ -23,19 +23,19 @@ class StatActivity : AppCompatActivity(){
 
 
         nextButton.setOnClickListener {
-            val strengthString = strength.text.toString()
-            val dexString = dexterity.text.toString()
-            val constString = constitution.text.toString()
-            val intString = intelligence.text.toString()
-            val wisString = wisdom.text.toString()
-            val charismaString = charisma.text.toString()
+            val strengthString = strength.text.toString().toInt()
+            val dexString = dexterity.text.toString().toInt()
+            val constString = constitution.text.toString().toInt()
+            val intString = intelligence.text.toString().toInt()
+            val wisString = wisdom.text.toString().toInt()
+            val charismaString = charisma.text.toString().toInt()
 
-            character.put("Strength", strengthString)
-            character.put("Dexterity", dexString)
-            character.put("Constitution", constString)
-            character.put("Intelligence", intString)
-            character.put("Wisdom", wisString)
-            character.put("Charisma", charismaString)
+            character.setStrength(strengthString)
+            character.setDex(dexString)
+            character.setConst(constString)
+            character.setIntelligence(intString)
+            character.setWis(wisString)
+            character.setCharisma(charismaString)
             character.saveInBackground()
         }
     }
