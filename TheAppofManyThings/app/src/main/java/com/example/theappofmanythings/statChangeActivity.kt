@@ -41,6 +41,7 @@ class statChangeActivity : AppCompatActivity() {
                 character.setStrength(strength)
             }
             strengthReplace.text = character.getStrength().toString()
+            character.saveInBackground()
         }
 
         strengthSubtract.setOnClickListener {
@@ -52,6 +53,7 @@ class statChangeActivity : AppCompatActivity() {
                 character.setStrength(strength)
             }
             strengthReplace.text = character.getStrength().toString()
+            character.saveInBackground()
         }
 
         changeToSkills.setOnClickListener {
