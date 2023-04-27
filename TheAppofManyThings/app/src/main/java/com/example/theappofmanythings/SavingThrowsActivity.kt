@@ -33,6 +33,8 @@ class SavingThrowsActivity : AppCompatActivity(){
         charReplace.text = charisma?.let { statModifier(it).toString() }
 
 
+
+
     }
 
     fun statModifier(x: Int): Int {

@@ -43,6 +43,7 @@
         <activity android:name=".descriptionActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".statChangeActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".SkillActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".CombatActivity" android:label="The App of Many Things"> </activity>
     </application>
 
 

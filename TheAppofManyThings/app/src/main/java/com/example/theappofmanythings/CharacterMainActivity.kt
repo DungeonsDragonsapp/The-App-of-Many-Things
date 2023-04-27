@@ -13,10 +13,18 @@ class CharacterMainActivity  : AppCompatActivity() {
         setContentView(com.example.theappofmanythings.R.layout.character_mainpage)
 
         val statButton = findViewById<Button>(com.example.theappofmanythings.R.id.statButton)
+        val combatButton = findViewById<Button>(com.example.theappofmanythings.R.id.combatButton)
 
         statButton.setOnClickListener {
             val intent = Intent(this@CharacterMainActivity, statChangeActivity::class.java)
             startActivity(intent)
         }
+
+        combatButton.setOnClickListener {
+            val intent = Intent(this@CharacterMainActivity, CombatActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 }
