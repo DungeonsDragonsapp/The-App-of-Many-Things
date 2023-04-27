@@ -39,7 +39,7 @@ class StatActivity : AppCompatActivity(){
             character.setCharisma(charismaString)
             character.saveInBackground()
 
-
+            
             // for testing, remove after
             val intent = Intent(this@StatActivity, descriptionActivity::class.java)
             startActivity(intent)
