@@ -12,7 +12,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.parse.ParseUser
 
-var currentuser : String = ""
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
             val username = findViewById<EditText>(R.id.inputUsername).text.toString()
             val password = findViewById<EditText>(R.id.inputPassword).text.toString()
             loginUser(username, password)
-            currentuser = currentuser + username
         }
     }
 
@@ -39,7 +37,7 @@ class LoginActivity : AppCompatActivity() {
         ParseUser.logInInBackground(username, password, ({user, e->
             if(user!=null){
                 Log.i("LoginActivity", "User Logged in")
-                val intent = Intent(this@LoginActivity, ProfileDetail::class.java)
+                val intent = Intent(this@LoginActivity, CharacterList::class.java)
                 startActivity(intent)
             } else {
                 e.printStackTrace()

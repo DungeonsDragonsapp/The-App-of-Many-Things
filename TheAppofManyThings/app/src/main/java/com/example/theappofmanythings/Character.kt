@@ -116,6 +116,36 @@ class Character : ParseObject() {
         put(KEY_CHARISMA, model)
     }
 
+    fun getPersonality(): String? {
+        return getString(KEY_PERSONALITY)
+    }
+
+    fun setPersonality(horsepower: String) {
+        put(KEY_PERSONALITY, horsepower)
+    }
+
+    fun getBonds(): String? {
+        return getString(KEY_BONDS)
+    }
+
+    fun setBonds(horsepower: String) {
+        put(KEY_BONDS, horsepower)
+    }
+
+    fun getFlaws(): String? {
+        return getString(KEY_FLAWS)
+    }
+
+    fun setFlaws(horsepower: String) {
+        put(KEY_FLAWS, horsepower)
+    }
+    fun getIdeals(): String? {
+        return getString(KEY_IDEALS)
+    }
+
+    fun setIdeals(horsepower: String) {
+        put(KEY_IDEALS, horsepower)
+    }
     companion object {
         const val KEY_USER = "User"
         const val KEY_IMAGE = "img"
@@ -130,5 +160,9 @@ class Character : ParseObject() {
         const val KEY_INTELLIGENCE = "Intelligence"
         const val KEY_WISDOM = "Wisdom"
         const val KEY_CHARISMA = "Charisma"
+        const val KEY_PERSONALITY = "Personality_Trait"
+        const val KEY_BONDS= "Bonds"
+        const val KEY_FLAWS = "Flaws"
+        const val KEY_IDEALS = "Ideals"
     }
 }
