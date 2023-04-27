@@ -1,6 +1,7 @@
 package com.example.theappofmanythings
 import android.app.Application
 import com.parse.Parse;
+import com.parse.ParseObject
 
 
 class AppOfmanythings : Application() {
@@ -12,5 +13,6 @@ class AppOfmanythings : Application() {
                 .clientKey(getString(R.string.back4app_client_key))
                 .server(getString(R.string.back4app_server_url))
                 .build());
+        ParseObject.registerSubclass(Character::class.java)
     }
 }

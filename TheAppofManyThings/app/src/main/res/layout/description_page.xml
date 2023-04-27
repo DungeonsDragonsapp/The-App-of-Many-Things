@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/PersonalityInput"
+        android:layout_width="269dp"
+        android:layout_height="131dp"
+        android:layout_margin="24dp"
+        android:layout_marginTop="76dp"
+        android:ems="10"
+        android:hint="Personality Traits"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/bonds"
+        android:layout_width="263dp"
+        android:layout_height="112dp"
+        android:layout_margin="24dp"
+        android:ems="10"
+        android:hint="Bonds"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.358"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <EditText
+        android:id="@+id/flaws"
+        android:layout_width="263dp"
+        android:layout_height="112dp"
+        android:layout_margin="24dp"
+        android:ems="10"
+        android:hint="Flaws"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.445"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.851" />
+
+    <EditText
+        android:id="@+id/ideals"
+        android:layout_width="263dp"
+        android:layout_height="112dp"
+        android:layout_margin="24dp"
+        android:ems="10"
+        android:hint="Ideals"
+        android:inputType="textPersonName"
+        android:padding="4dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.347" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flaws" />
+</androidx.constraintlayout.widget.ConstraintLayout>

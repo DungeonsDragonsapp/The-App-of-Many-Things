@@ -35,12 +35,23 @@
             android:value="@string/back4app_client_key" />
         <activity android:name=".RegistrationActivity" android:label="Registration"> </activity>
         <activity android:name=".MainActivity" android:label="The App of Many Things"> </activity>
+
+        <activity android:name=".DetailActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".CharacterCreationActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".CharacterList" android:label="The App of Many Things"> </activity>
+        <activity android:name=".StatActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".SavingThrowsActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".CharacterMainActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".descriptionActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".statChangeActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".SkillActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".CombatActivity" android:label="The App of Many Things"> </activity>
+
         <activity android:name=".IndivSpellActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".AddSpellActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".AddItemActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".EquipList" android:label="The App of Many Things"> </activity>
         <activity android:name=".IndivItemActivity" android:label="The App of Many Things"> </activity>
-
     </application>
 
 

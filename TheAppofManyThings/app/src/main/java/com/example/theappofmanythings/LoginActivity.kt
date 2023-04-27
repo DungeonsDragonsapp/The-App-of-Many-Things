@@ -38,7 +38,7 @@ class LoginActivity : AppCompatActivity() {
         ParseUser.logInInBackground(username, password, ({user, e->
             if(user!=null){
                 Log.i("LoginActivity", "User Logged in")
-                val intent = Intent(this@LoginActivity, MainActivity::class.java)
+                val intent = Intent(this@LoginActivity, CharacterList::class.java)
                 startActivity(intent)
             } else {
                 e.printStackTrace()
