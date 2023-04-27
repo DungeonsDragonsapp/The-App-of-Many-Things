@@ -1,6 +1,7 @@
 package com.example.theappofmanythings
 
 import android.R
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -37,6 +38,11 @@ class StatActivity : AppCompatActivity(){
             character.setWis(wisString)
             character.setCharisma(charismaString)
             character.saveInBackground()
+
+
+            // for testing, remove after
+            val intent = Intent(this@StatActivity, descriptionActivity::class.java)
+            startActivity(intent)
         }
     }
 }
