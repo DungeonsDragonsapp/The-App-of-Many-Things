@@ -48,7 +48,7 @@
         android:layout_margin="24dp"
         android:ems="10"
         android:hint="Name Character"
-        android:inputType="number"
+        android:inputType="text"
         android:padding="4dp"
         android:text=""
         app:layout_constraintBottom_toTopOf="@+id/nextButton"
