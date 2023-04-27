@@ -38,6 +38,7 @@
         <activity android:name=".DetailActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".CharacterCreationActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".StatActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".ProfileDetail" android:label="The App of Many Things"> </activity>
     </application>
 
 
