@@ -50,6 +50,7 @@
         <activity android:name=".AddItemActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".EquipList" android:label="The App of Many Things"> </activity>
         <activity android:name=".IndivItemActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".ProfileDetail" android:label="The App of Many Things"> </activity>
     </application>
 
 
