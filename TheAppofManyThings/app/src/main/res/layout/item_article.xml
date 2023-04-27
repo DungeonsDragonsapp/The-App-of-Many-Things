@@ -30,7 +30,7 @@
         app:layout_constraintTop_toTopOf="@+id/mediaImage" />
 
     <TextView
-        android:id="@+id/mediaAbstract"
+        android:id="@+id/descriptionLine"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"

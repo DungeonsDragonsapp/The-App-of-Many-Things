@@ -14,15 +14,15 @@ import com.parse.ParseUser
 
 private const val TAG = "DetailActivity"
 
-class AddActivity : AppCompatActivity() {
+class AddSpellActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.input_layout)
+        setContentView(R.layout.spell_input_layout)
 
         val button = findViewById<Button>(R.id.submitButton)
         val etDesc = findViewById<EditText>(R.id.editTextDesc)
-        val etLvl = findViewById<EditText>(R.id.editTextLvl)
+        val etLvl = findViewById<EditText>(R.id.editTextVal)
         val etName = findViewById<EditText>(R.id.editTextName)
 
         button.setOnClickListener{
@@ -88,7 +88,7 @@ class AddActivity : AppCompatActivity() {
     }
 
     private fun goToMainActivity() {
-        val intent = Intent(this@AddActivity, MainActivity::class.java)
+        val intent = Intent(this@AddSpellActivity, MainActivity::class.java)
         startActivity(intent)
         finish()
     }

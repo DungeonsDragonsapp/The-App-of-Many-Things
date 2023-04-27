@@ -9,13 +9,12 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.parse.FindCallback
 import com.parse.ParseException
 import com.parse.ParseQuery
-import com.parse.ParseUser
 import okhttp3.Headers
 import org.json.JSONException
 
 private const val TAG = "DetailActivity"
 
-class DetailActivity : AppCompatActivity() {
+class IndivSpellActivity : AppCompatActivity() {
     private lateinit var titleTextView: TextView
     private lateinit var bylineTextView: TextView
     private lateinit var abstractTextView: TextView
@@ -27,8 +26,8 @@ class DetailActivity : AppCompatActivity() {
         // TODO: Find the views for the screen
         //mediaImageView = findViewById(R.id.mediaImage)
         titleTextView = findViewById(R.id.mediaTitle)
-        bylineTextView = findViewById(R.id.mediaByline)
-        abstractTextView = findViewById(R.id.mediaAbstract)
+        bylineTextView = findViewById(R.id.firstLine)
+        abstractTextView = findViewById(R.id.descriptionLine)
 
         // TODO: Get the extra from the Intent
         val listSpell = intent.getSerializableExtra(ARTICLE_EXTRA) as listSpell

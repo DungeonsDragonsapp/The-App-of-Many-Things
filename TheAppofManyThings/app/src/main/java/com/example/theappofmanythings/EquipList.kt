@@ -12,22 +12,16 @@ import com.example.theappofmanythings.databinding.ActivityMainBinding
 import com.codepath.asynchttpclient.AsyncHttpClient
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import com.parse.*
-import kotlinx.serialization.json.Json
 import okhttp3.Headers
 import org.json.JSONException
 
-fun createJson() = Json {
-    isLenient = true
-    ignoreUnknownKeys = true
-    useAlternativeNames = false
-}
 
-private const val TAG = "MainActivity/"
+private const val TAG = "EquipList/"
 private const val ARTICLE_SEARCH_URL =
-    "https://www.dnd5eapi.co/api/spells"
+    "https://www.dnd5eapi.co/api/equipment"
 
-class MainActivity : AppCompatActivity() {
-    private val listSpells = mutableListOf<listSpell>()
+class EquipList : AppCompatActivity() {
+    private val listEquip = mutableListOf<listEquip>()
     private lateinit var articlesRecyclerView: RecyclerView
     private lateinit var binding: ActivityMainBinding
 
@@ -45,18 +39,19 @@ class MainActivity : AppCompatActivity() {
                 .build())
 
         // Register the Car Parse model so that we can use that class and link to the table
-        ParseObject.registerSubclass(Spell::class.java)
+        ParseObject.registerSubclass(Item::class.java)
 
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
-        setContentView(view)
+        //setContentView(view)
+        setContentView(R.layout.equipment_list)
 
         articlesRecyclerView = findViewById(R.id.articles)
 
         // TODO: Set up ArticleAdapter with articles
-        val spellAdapter = SpellAdapter(this, listSpells)
-        articlesRecyclerView.adapter = spellAdapter
+        val itemAdapter = ItemAdapter(this, listEquip)
+        articlesRecyclerView.adapter = itemAdapter
 
 
         articlesRecyclerView.layoutManager = LinearLayoutManager(this).also {
@@ -72,15 +67,15 @@ class MainActivity : AppCompatActivity() {
                 response: String?,
                 throwable: Throwable?
             ) {
-                Log.e(TAG, "Failed to fetch spells: $statusCode")
+                Log.e(TAG, "Failed to fetch items: $statusCode")
             }
 
             override fun onSuccess(statusCode: Int, headers: Headers, json: JSON) {
-                Log.i(TAG, "Successfully fetched spells: $json")
+                Log.i(TAG, "Successfully fetched items: $json")
                 try {
                     // TODO: Create the parsedJSON
                     val parsedJson = createJson().decodeFromString(
-                        InitSpellResp.serializer(),
+                        InitItemResp.serializer(),
                         json.jsonObject.toString()
                     )
 
@@ -88,10 +83,10 @@ class MainActivity : AppCompatActivity() {
 
                     // TODO: Save the articles and reload the screen
                     parsedJson.results?.let { list ->
-                        listSpells.addAll(list)
+                        listEquip.addAll(list)
 
                         // Reload the screen
-                        spellAdapter.notifyDataSetChanged()
+                        itemAdapter.notifyDataSetChanged()
                     }
 
                 } catch (e: JSONException) {
@@ -102,34 +97,25 @@ class MainActivity : AppCompatActivity() {
         })
 
         queryFromDb()
-        spellAdapter.notifyDataSetChanged()
+        itemAdapter.notifyDataSetChanged()
 
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener{
 
-            val intent = Intent(this@MainActivity, AddSpellActivity::class.java)
+            val intent = Intent(this@EquipList, AddItemActivity::class.java)
             startActivity(intent)
 
-            //val intent = Intent(this, AddActivity::class.java)
-            //startActivity(intent)
         }
 
-        val buttonTwo = findViewById<Button>(R.id.buttonTwo)
-        buttonTwo.setOnClickListener{
-            val intent = Intent(this@MainActivity, EquipList::class.java)
-            startActivity(intent)
-
-
-        }
 
     }
 
     private fun queryFromDb() {
         // Start creating a Parse query
-        val query: ParseQuery<Spell> = ParseQuery(Spell::class.java)
+        val query: ParseQuery<Item> = ParseQuery(Item::class.java)
 
         // Asking parse to also include the user that posted the Post (Since User is a pointer in the Post table)
-        query.include(Spell.KEY_USER)
+        query.include(Item.KEY_USER)
 
         // Get cars in reverse-chronological order that we created them
         query.addDescendingOrder("createdAt")
@@ -138,24 +124,24 @@ class MainActivity : AppCompatActivity() {
         query.whereEqualTo("user", ParseUser.getCurrentUser())
 
         // Launch the query
-        query.findInBackground(object : FindCallback<Spell> {
-            override fun done(spellsResponse: MutableList<Spell>?, e: ParseException?) {
+        query.findInBackground(object : FindCallback<Item> {
+            override fun done(itemsResponse: MutableList<Item>?, e: ParseException?) {
                 if (e != null) {
                     Log.e(TAG, "Error fetching posts")
                 } else {
-                    if (spellsResponse != null) {
-                        val dbSpellList = mutableListOf<listSpell>()
+                    if (itemsResponse != null) {
+                        val dbItemList = mutableListOf<listEquip>()
 
-                        for (singleCar in spellsResponse)
+                        for (singleCar in itemsResponse)
                         {
                             Log.i(
                                 TAG,
-                                "Spell: " + singleCar.getName() + ", username: " + singleCar.getUser()?.username
+                                "Item: " + singleCar.getName() + ", username: " + singleCar.getUser()?.username
                             )
-                            val addToDb = listSpell("IsDb", singleCar.getName(), singleCar.objectId)
-                            dbSpellList.add(addToDb)
+                            val addToDb = listEquip("IsDb", singleCar.getName(), singleCar.objectId)
+                            dbItemList.add(addToDb)
                         }
-                        listSpells.addAll(dbSpellList)
+                        listEquip.addAll(dbItemList)
                         //articleAdapter.notifyDataSetChanged()
                         //swipeContainer.isRefreshing = false
                     }

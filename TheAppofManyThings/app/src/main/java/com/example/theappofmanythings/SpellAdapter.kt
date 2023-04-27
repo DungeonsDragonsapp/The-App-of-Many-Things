@@ -11,8 +11,8 @@ import androidx.recyclerview.widget.RecyclerView
 const val ARTICLE_EXTRA = "ARTICLE_EXTRA"
 private const val TAG = "ArticleAdapter"
 
-class ArticleAdapter(private val context: Context, private val listSpells: List<listSpell>) :
-    RecyclerView.Adapter<ArticleAdapter.ViewHolder>() {
+class SpellAdapter(private val context: Context, private val listSpells: List<listSpell>) :
+    RecyclerView.Adapter<SpellAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_article, parent, false)
@@ -30,7 +30,7 @@ class ArticleAdapter(private val context: Context, private val listSpells: List<
         View.OnClickListener {
 
         private val titleTextView = itemView.findViewById<TextView>(R.id.mediaTitle)
-        private val abstractTextView = itemView.findViewById<TextView>(R.id.mediaAbstract)
+        private val abstractTextView = itemView.findViewById<TextView>(R.id.descriptionLine)
 
         init {
             itemView.setOnClickListener(this)
@@ -47,7 +47,7 @@ class ArticleAdapter(private val context: Context, private val listSpells: List<
             val spell = listSpells[layoutPosition]
 
             // TODO: Navigate to Details screen and pass selected article
-            val intent = Intent(context, DetailActivity::class.java)
+            val intent = Intent(context, IndivSpellActivity::class.java)
             intent.putExtra(ARTICLE_EXTRA, spell)
             context.startActivity(intent)
         }

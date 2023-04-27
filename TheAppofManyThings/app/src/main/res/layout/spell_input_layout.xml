@@ -61,7 +61,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextLvl"
+        android:id="@+id/editTextVal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="15"
@@ -83,6 +83,6 @@
         android:hint="Description"
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLvl" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextVal" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

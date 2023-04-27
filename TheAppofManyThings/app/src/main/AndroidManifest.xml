@@ -35,8 +35,12 @@
             android:value="@string/back4app_client_key" />
         <activity android:name=".RegistrationActivity" android:label="Registration"> </activity>
         <activity android:name=".MainActivity" android:label="The App of Many Things"> </activity>
-        <activity android:name=".DetailActivity" android:label="The App of Many Things"> </activity>
-        <activity android:name=".AddActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".IndivSpellActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".AddSpellActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".AddItemActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".EquipList" android:label="The App of Many Things"> </activity>
+        <activity android:name=".IndivItemActivity" android:label="The App of Many Things"> </activity>
+
     </application>
 
 
