@@ -26,11 +26,11 @@ class statChangeActivity : AppCompatActivity() {
         val changeToSkills = findViewById<Button>(com.example.theappofmanythings.R.id.backButton)
 
         strengthReplace.text = character.getStrength().toString()
-        /*dexReplace.text =
-        constReplace.text =
-        intReplace.text =
-        wisReplace.text =
-        charReplace.text = */
+        dexReplace.text = character.getDex().toString()
+        constReplace.text = character.getConst().toString()
+        intReplace.text = character.getIntelligence().toString()
+        wisReplace.text = character.getWis().toString()
+        charReplace.text = character.getCharisma().toString()
 
         strengthAdd.setOnClickListener{
             var strength = character.getStrength()?.toInt()
