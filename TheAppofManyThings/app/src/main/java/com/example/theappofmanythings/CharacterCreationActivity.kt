@@ -27,10 +27,6 @@ class CharacterCreationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(com.example.theappofmanythings.R.layout.character_creation)
 
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type = "image/*"
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PHOTO_CODE)
 
 
         val spinnerRaces = findViewById<Spinner>(com.example.theappofmanythings.R.id.spinner_races)
@@ -61,6 +57,16 @@ class CharacterCreationActivity : AppCompatActivity() {
             findViewById<EditText>(com.example.theappofmanythings.R.id.backgroundInput)
         val levelEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.levelInput)
         val nameEditText = findViewById<EditText>(com.example.theappofmanythings.R.id.characterNameInput)
+        val imageToUse = findViewById<ImageView>(com.example.theappofmanythings.R.id.imageView)
+
+        imageToUse.setOnClickListener {
+            val intent = Intent(Intent.ACTION_PICK)
+            intent.type = "image/*"
+            intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+            startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PHOTO_CODE)
+        }
+
+
         nextButton.setOnClickListener {
             //val character = ParseObject("character")
             val myRace = spinnerRaces.selectedItem.toString()

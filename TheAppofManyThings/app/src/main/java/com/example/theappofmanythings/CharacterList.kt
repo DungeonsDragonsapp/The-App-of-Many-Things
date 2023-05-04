@@ -1,6 +1,5 @@
 package com.example.theappofmanythings
 
-import android.os.Bundle
 import android.util.Log
 import android.R
 import android.content.Intent
@@ -130,7 +129,8 @@ class CharacterList : AppCompatActivity()  {
                             char.getPersonality(),
                             char.getBonds(),
                             char.getFlaws(),
-                            char.getIdeals())
+                            char.getIdeals(),
+                        )
                         dbCharList.add(addToDb)
                     }
                     listCharacter.addAll(dbCharList)
