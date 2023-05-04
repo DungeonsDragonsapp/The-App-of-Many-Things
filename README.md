@@ -53,3 +53,17 @@ The following **required** functionality is completed:
 ![customSpells](https://user-images.githubusercontent.com/122946486/234166498-24def933-ac01-451a-b3d5-15f9fd8299d3.gif)
 
 
+For Sprint 6:
+
+The following **required** functionality is completed:
+
+- [x] added character selection screen
+- [x] added main character screen
+- [x] added profile settings page
+- [x] added saving throws page, stats updating page, and skill page
+- [x] added buttons for item list and equipment list pages 
+
+![DNDAPPSPRINT7real](https://user-images.githubusercontent.com/122946486/235574481-aece189e-497e-417d-a0c3-8dd7d6c81bf0.gif)
+
+
+
