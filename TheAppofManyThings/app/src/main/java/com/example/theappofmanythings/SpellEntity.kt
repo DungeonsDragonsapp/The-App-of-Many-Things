@@ -1,5 +1,5 @@
 package com.example.theappofmanythings
-
+/*
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
@@ -13,3 +13,4 @@ data class SpellEntity(
     @ColumnInfo(name = "level") val level: String?,
     @ColumnInfo(name = "description") val desc: List<String>?
 )
+*/
