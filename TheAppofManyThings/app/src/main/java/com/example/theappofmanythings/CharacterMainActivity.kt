@@ -16,6 +16,7 @@ class CharacterMainActivity  : AppCompatActivity() {
         val combatButton = findViewById<Button>(com.example.theappofmanythings.R.id.combatButton)
         val equipButton = findViewById<Button>(com.example.theappofmanythings.R.id.equipButton)
         val spellButton = findViewById<Button>(com.example.theappofmanythings.R.id.spellButton)
+        val descriptionButton = findViewById<Button>(com.example.theappofmanythings.R.id.descriptionPage)
 
         statButton.setOnClickListener {
             val intent = Intent(this@CharacterMainActivity, statChangeActivity::class.java)
@@ -34,6 +35,11 @@ class CharacterMainActivity  : AppCompatActivity() {
 
         spellButton.setOnClickListener {
             val intent = Intent(this@CharacterMainActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+
+        descriptionButton.setOnClickListener {
+            val intent = Intent(this@CharacterMainActivity, descriptionViewerActivity::class.java)
             startActivity(intent)
         }
 
