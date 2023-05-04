@@ -58,6 +58,7 @@
         <activity android:name=".descriptionViewerActivity" android:label="The App of Many Things"> </activity>
 
         <activity android:name=".languageActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".basicTraitsActivity" android:label="The App of Many Things"> </activity>
 
 
     </application>

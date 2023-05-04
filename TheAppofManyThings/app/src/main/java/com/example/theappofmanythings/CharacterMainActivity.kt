@@ -17,6 +17,9 @@ class CharacterMainActivity  : AppCompatActivity() {
         val equipButton = findViewById<Button>(com.example.theappofmanythings.R.id.equipButton)
         val spellButton = findViewById<Button>(com.example.theappofmanythings.R.id.spellButton)
         val descriptionButton = findViewById<Button>(com.example.theappofmanythings.R.id.descriptionPage)
+        val basicTraitsButton = findViewById<Button>(com.example.theappofmanythings.R.id.mainDetailsPage)
+        val languageButton = findViewById<Button>(com.example.theappofmanythings.R.id.languagesProficienciesButton)
+        val selectionButton = findViewById<Button>(com.example.theappofmanythings.R.id.selectionPage)
 
         statButton.setOnClickListener {
             val intent = Intent(this@CharacterMainActivity, statChangeActivity::class.java)
@@ -44,7 +47,19 @@ class CharacterMainActivity  : AppCompatActivity() {
         }
 
 
+        basicTraitsButton.setOnClickListener {
+            val intent = Intent(this@CharacterMainActivity, basicTraitsActivity::class.java)
+            startActivity(intent)
+        }
 
+        languageButton.setOnClickListener {
+            val intent = Intent(this@CharacterMainActivity, languagesViewerActivity::class.java)
+            startActivity(intent)
+        }
 
+        selectionButton.setOnClickListener {
+            val intent = Intent(this@CharacterMainActivity, CharacterList::class.java)
+            startActivity(intent)
+        }
     }
 }
