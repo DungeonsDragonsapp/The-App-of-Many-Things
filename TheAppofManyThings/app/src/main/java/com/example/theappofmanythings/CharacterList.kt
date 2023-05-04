@@ -22,10 +22,7 @@ class CharacterList : AppCompatActivity()  {
         super.onCreate(savedInstanceState)
         setContentView(layout.character_list)
 
-        val intent = Intent(Intent.ACTION_PICK)
-        intent.type = "image/*"
-        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
-        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PHOTO_CODE)
+
 
         val createChar = findViewById<View>(id.createCharacterButton) as Button
         createChar.setOnClickListener {

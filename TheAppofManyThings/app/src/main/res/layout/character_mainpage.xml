@@ -99,6 +99,19 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
 
+            <ImageView
+                android:id="@+id/mainDetailsList"
+                android:background="#9999A9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <Button
+                android:id="@+id/mainDetailsPage"
+                android:background="#24d"
+                android:text="Basic Traits"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

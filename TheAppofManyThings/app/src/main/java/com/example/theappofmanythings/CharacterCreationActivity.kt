@@ -1,6 +1,7 @@
 package com.example.theappofmanythings
 
 import android.R
+import android.R.attr.bitmap
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.ImageDecoder
@@ -12,8 +13,9 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
-import com.parse.ParseObject
+import com.parse.ParseFile
 import com.parse.ParseUser
+import java.io.ByteArrayOutputStream
 import java.io.IOException
 
 
@@ -24,6 +26,13 @@ class CharacterCreationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(com.example.theappofmanythings.R.layout.character_creation)
+
+        val intent = Intent(Intent.ACTION_PICK)
+        intent.type = "image/*"
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_PHOTO_CODE)
+
+
         val spinnerRaces = findViewById<Spinner>(com.example.theappofmanythings.R.id.spinner_races)
         val spinnerClasses =
             findViewById<Spinner>(com.example.theappofmanythings.R.id.spinner_classes)
@@ -107,7 +116,7 @@ class CharacterCreationActivity : AppCompatActivity() {
         }
     }
 
-    fun loadFromUri(photoUri: Uri?): Bitmap? {
+    public fun loadFromUri(photoUri: Uri): Bitmap? {
         var image: Bitmap? = null
         try {
             // check version of Android on device
@@ -132,7 +141,12 @@ class CharacterCreationActivity : AppCompatActivity() {
             val photoUri = data.data
 
             // Load the image located at photoUri into selectedImage
-            val selectedImage = loadFromUri(photoUri)
+            val selectedImage = photoUri?.let { loadFromUri(it) }
+
+            //val stream = ByteArrayOutputStream()
+            //val bitmapBytes: ByteArray = stream.toByteArray()
+            //val image = ParseFile("myImage", selectedImage)
+            //character.setImage(photoUri)
 
             // Load the selected image into a preview
             val ivPreview: ImageView = findViewById<View>(com.example.theappofmanythings.R.id.imageView) as ImageView

@@ -1,5 +1,6 @@
 package com.example.theappofmanythings
 
+import android.net.Uri
 import com.parse.ParseClassName
 import com.parse.ParseFile
 import com.parse.ParseObject
@@ -57,7 +58,7 @@ class Character : ParseObject() {
     }
 
     fun setImage(parseFile: ParseFile) {
-        put(KEY_IMAGE, parseFile)
+            put(KEY_IMAGE, parseFile)
     }
 
     fun getBackground(): String? {
