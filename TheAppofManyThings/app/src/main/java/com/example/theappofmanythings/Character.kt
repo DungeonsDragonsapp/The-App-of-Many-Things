@@ -146,6 +146,28 @@ class Character : ParseObject() {
     fun setIdeals(horsepower: String) {
         put(KEY_IDEALS, horsepower)
     }
+
+    fun getLanguages(): String? {
+        return getString(KEY_LANGUAGES)
+    }
+
+    fun setLanguages(horsepower: String) {
+        put(KEY_LANGUAGES, horsepower)
+    }
+
+    fun getProficiencies(): String? {
+        return getString(KEY_PROFICIENCIES)
+    }
+
+    fun setProficiencies(horsepower: String) {
+        put(KEY_PROFICIENCIES, horsepower)
+    }
+
+
+
+
+
+
     companion object {
         const val KEY_USER = "User"
         const val KEY_IMAGE = "img"
@@ -164,5 +186,8 @@ class Character : ParseObject() {
         const val KEY_BONDS= "Bonds"
         const val KEY_FLAWS = "Flaws"
         const val KEY_IDEALS = "Ideals"
+        const val KEY_LANGUAGES = "Languages"
+        const val KEY_PROFICIENCIES = "Proficiencies"
+        const val KEY_ITEMLIST = "Item List"
     }
 }
