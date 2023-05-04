@@ -32,6 +32,9 @@ class SavingThrowsActivity : AppCompatActivity(){
         wisReplace.text = wisdom?.let { statModifier(it).toString() }
         charReplace.text = charisma?.let { statModifier(it).toString() }
 
+        backButton.setOnClickListener {
+            onBackPressed()
+        }
 
 
 

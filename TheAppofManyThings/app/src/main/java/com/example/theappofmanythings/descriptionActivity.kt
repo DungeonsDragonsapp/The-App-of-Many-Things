@@ -30,7 +30,7 @@ class descriptionActivity  : AppCompatActivity(){
             character.setIdeals(ideals)
             character.saveInBackground()
 
-            val intent = Intent(this@descriptionActivity, CharacterMainActivity::class.java)
+            val intent = Intent(this@descriptionActivity, languageActivity::class.java)
             startActivity(intent)
         }
     }

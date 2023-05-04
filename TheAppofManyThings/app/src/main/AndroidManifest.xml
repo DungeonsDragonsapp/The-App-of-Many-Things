@@ -4,6 +4,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".AppOfmanythings"
@@ -53,6 +55,12 @@
         <activity android:name=".EquipList" android:label="The App of Many Things"> </activity>
         <activity android:name=".IndivItemActivity" android:label="The App of Many Things"> </activity>
         <activity android:name=".ProfileDetail" android:label="The App of Many Things"> </activity>
+        <activity android:name=".descriptionViewerActivity" android:label="The App of Many Things"> </activity>
+
+        <activity android:name=".languageActivity" android:label="The App of Many Things"> </activity>
+        <activity android:name=".basicTraitsActivity" android:label="The App of Many Things"> </activity>
+
+
     </application>
 
 

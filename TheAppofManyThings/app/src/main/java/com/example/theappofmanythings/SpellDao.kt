@@ -1,5 +1,5 @@
 package com.example.theappofmanythings
-
+/*
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
@@ -16,3 +16,4 @@ interface SpellDao {
     @Query("DELETE FROM spell_table")
     fun deleteAll()
 }
+ */

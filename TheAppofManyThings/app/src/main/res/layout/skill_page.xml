@@ -1,153 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.832"
-        tools:layout_editor_absoluteX="244dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
 
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.886"
-        tools:layout_editor_absoluteX="244dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/textView31"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/acrobatics"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.782"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/animalHandling"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Animal Handling = " />
 
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.717"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/arcana"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Arcana = " />
 
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.668"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/athletics"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView23"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.543"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/deception"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.481"
-        tools:layout_editor_absoluteX="244dp" />
+            <TextView
+                android:id="@+id/history"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="29dp" />
+            <TextView
+                android:id="@+id/insight"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="71dp" />
+            <TextView
+                android:id="@+id/intimidation"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="112dp" />
+            <TextView
+                android:id="@+id/investigation"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView18"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="150dp" />
+            <TextView
+                android:id="@+id/medicine"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="213dp" />
+            <TextView
+                android:id="@+id/nature"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="255dp" />
+            <TextView
+                android:id="@+id/perception"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="244dp"
-        tools:layout_editor_absoluteY="292dp" />
+            <TextView
+                android:id="@+id/performance"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
 
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.612"
-        tools:layout_editor_absoluteX="244dp" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/persuasion"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
+
+            <TextView
+                android:id="@+id/religion"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
+
+            <TextView
+                android:id="@+id/sleightOfHand"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
+
+            <TextView
+                android:id="@+id/stealth"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
+
+            <TextView
+                android:id="@+id/survival"
+                android:layout_width="211dp"
+                android:layout_height="20dp"
+                android:text="Acrobatics = " />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
+

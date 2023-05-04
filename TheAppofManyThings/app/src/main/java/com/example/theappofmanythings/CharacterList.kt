@@ -2,6 +2,17 @@ package com.example.theappofmanythings
 
 import android.os.Bundle
 import android.util.Log
+import android.R
+import android.content.Intent
+import android.graphics.Bitmap
+import android.graphics.ImageDecoder
+import android.net.Uri
+import android.os.Build
+import android.os.Bundle
+import android.provider.MediaStore
+import android.view.View
+import android.widget.Button
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -9,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.theappofmanythings.R.*
 import com.example.theappofmanythings.databinding.ActivityMainBinding
 import com.parse.*
+import java.io.IOException
 
 
 class CharacterList : AppCompatActivity()  {
@@ -16,6 +28,7 @@ class CharacterList : AppCompatActivity()  {
     private lateinit var articlesRecyclerView: RecyclerView
     private lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 
 
@@ -50,14 +63,32 @@ class CharacterList : AppCompatActivity()  {
         }
 
 
+        
+
+
         queryFromDb()
         charAdapter.notifyDataSetChanged()
+
+        val createChar = findViewById<View>(id.createCharacterButton) as Button
+        createChar.setOnClickListener {
+            val intent = Intent(this@CharacterList, CharacterCreationActivity::class.java)
+            startActivity(intent)
+        }
+
+        // PICK_PHOTO_CODE is a constant integer
+        val PICK_PHOTO_CODE = 1046
+
+        // Trigger gallery selection for a photo
 
     }
 
     private fun queryFromDb() {
         // Start creating a Parse query
         val query: ParseQuery<Character> = ParseQuery(Character::class.java)
+    
+
+
+    
 
         // Asking parse to also include the user that posted the Post (Since User is a pointer in the Post table)
         query.include(Character.KEY_USER)

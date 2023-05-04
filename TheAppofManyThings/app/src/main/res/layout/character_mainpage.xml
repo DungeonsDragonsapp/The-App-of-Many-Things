@@ -15,6 +15,19 @@
             android:orientation="vertical">
 
             <Button
+                android:id="@+id/mainDetailsPage"
+                android:background="#24d"
+                android:text="Basic Traits"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <ImageView
+                android:id="@+id/mainDetailsList"
+                android:background="#9999A9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+            <Button
                 android:id="@+id/combatButton"
                 android:background="#24d"
                 android:text="combat"
@@ -62,7 +75,7 @@
             <Button
                 android:id="@+id/languagesProficienciesButton"
                 android:background="#24d"
-                android:text="Equipment"
+                android:text="languages and proficiencies"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
             <ImageView
@@ -87,6 +100,31 @@
                 android:text="Abilities"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"/>
+            <ImageView
+                android:id="@+id/descriptionList"
+                android:background="#9999A9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <Button
+                android:id="@+id/descriptionPage"
+                android:background="#24d"
+                android:text="Personality"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <ImageView
+                android:id="@+id/selectionList"
+                android:background="#9999A9"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+            <Button
+                android:id="@+id/selectionPage"
+                android:background="#24d"
+                android:text="back to character select"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"/>
+
+
+
 
         </LinearLayout>
     </ScrollView>
