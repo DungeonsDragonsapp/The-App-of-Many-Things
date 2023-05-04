@@ -27,7 +27,7 @@ class ProfileDetail : AppCompatActivity(){
         val userbut = findViewById<Button>(R.id.Userbutton)
         val passbut = findViewById<Button>(R.id.Passbutton)
 
-        val currentuser= ParseUser.getCurrentUser().username
+        val currentuser = ParseUser.getCurrentUser().username
         val cur23pas23d25 = confpasstext.toString()
         curusertext.setText(currentuser)
 

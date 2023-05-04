@@ -17,6 +17,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/characterList"
         android:layout_width="293dp"
         android:layout_height="548dp"
         android:layout_margin="24dp"

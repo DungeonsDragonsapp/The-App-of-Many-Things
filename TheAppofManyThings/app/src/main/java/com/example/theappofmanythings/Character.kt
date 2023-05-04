@@ -1,16 +1,62 @@
 package com.example.theappofmanythings
 
+import androidx.annotation.Keep
 import android.net.Uri
 import com.parse.ParseClassName
 import com.parse.ParseFile
 import com.parse.ParseObject
 import com.parse.ParseUser
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
 /**
  * Make : String
  * Model : File
  * User: User
  */
+
+@Keep
+@Serializable
+data class listChar(
+    @SerialName("index")
+    val index: String?,
+    @SerialName("name")
+    val name: String?,
+    @SerialName("url")
+    val url: String?,
+
+    @SerialName("race")
+    val race: String?,
+    @SerialName("class")
+    val charClass: String?,
+    @SerialName("level")
+    val level: Int?,
+    //@SerialName("image")
+    //val image: ParseFile?,
+    @SerialName("background")
+    val background: String?,
+    @SerialName("str")
+    val str: Int?,
+    @SerialName("dex")
+    val dex: Int?,
+    @SerialName("con")
+    val con: Int?,
+    @SerialName("int")
+    val int: Int?,
+    @SerialName("wis")
+    val wis: Int?,
+    @SerialName("charisma")
+    val charisma: Int?,
+    @SerialName("personality")
+    val personality: String?,
+    @SerialName("bond")
+    val bond: String?,
+    @SerialName("flaw")
+    val flaw: String?,
+    @SerialName("ideal")
+    val ideal: String?,
+) :java.io.Serializable
+
 @ParseClassName("character")
 class Character : ParseObject() {
 
